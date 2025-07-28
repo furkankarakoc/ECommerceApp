@@ -34,8 +34,36 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				Tests/ECommerceTests/CoreDataTests/CoreDataManagerTests.swift,
+				Tests/ECommerceTests/Mocks/MockObjects.swift,
+				Tests/ECommerceTests/NetworkTests/NetworkManagerTests.swift,
+				Tests/ECommerceTests/ViewModelTests/CartViewModelTests.swift,
+				Tests/ECommerceTests/ViewModelTests/ProductDetailViewModelTests.swift,
+				Tests/ECommerceTests/ViewModelTests/ProductListViewModelTests.swift,
+				Tests/ECommerceUITests/ECommerceUITests.swift,
+				Tests/ECommerceUITests/ECommerceUITestsLaunchTests.swift,
 			);
 			target = 4C2D6C232E36507C00F35F70 /* ECommerce */;
+		};
+		4C2D6CBA2E36660100F35F70 /* Exceptions for "ECommerce" folder in "ECommerceUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ECommerceUITests/ECommerceUITests.swift,
+				Tests/ECommerceUITests/ECommerceUITestsLaunchTests.swift,
+			);
+			target = 4C2D6C462E36507F00F35F70 /* ECommerceUITests */;
+		};
+		4C2D6D3A2E36CC8500F35F70 /* Exceptions for "ECommerce" folder in "ECommerceTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ECommerceTests/CoreDataTests/CoreDataManagerTests.swift,
+				Tests/ECommerceTests/Mocks/MockObjects.swift,
+				Tests/ECommerceTests/NetworkTests/NetworkManagerTests.swift,
+				Tests/ECommerceTests/ViewModelTests/CartViewModelTests.swift,
+				Tests/ECommerceTests/ViewModelTests/ProductDetailViewModelTests.swift,
+				Tests/ECommerceTests/ViewModelTests/ProductListViewModelTests.swift,
+			);
+			target = 4C2D6C3C2E36507F00F35F70 /* ECommerceTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -44,18 +72,10 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				4C2D6C4F2E36507F00F35F70 /* Exceptions for "ECommerce" folder in "ECommerce" target */,
+				4C2D6D3A2E36CC8500F35F70 /* Exceptions for "ECommerce" folder in "ECommerceTests" target */,
+				4C2D6CBA2E36660100F35F70 /* Exceptions for "ECommerce" folder in "ECommerceUITests" target */,
 			);
 			path = ECommerce;
-			sourceTree = "<group>";
-		};
-		4C2D6C402E36507F00F35F70 /* ECommerceTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ECommerceTests;
-			sourceTree = "<group>";
-		};
-		4C2D6C4A2E36507F00F35F70 /* ECommerceUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ECommerceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -89,8 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				4C2D6C262E36507C00F35F70 /* ECommerce */,
-				4C2D6C402E36507F00F35F70 /* ECommerceTests */,
-				4C2D6C4A2E36507F00F35F70 /* ECommerceUITests */,
 				4C2D6C252E36507C00F35F70 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +161,6 @@
 			dependencies = (
 				4C2D6C3F2E36507F00F35F70 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				4C2D6C402E36507F00F35F70 /* ECommerceTests */,
-			);
 			name = ECommerceTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +180,6 @@
 			);
 			dependencies = (
 				4C2D6C492E36507F00F35F70 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4C2D6C4A2E36507F00F35F70 /* ECommerceUITests */,
 			);
 			name = ECommerceUITests;
 			packageProductDependencies = (
@@ -191,6 +203,7 @@
 					};
 					4C2D6C3C2E36507F00F35F70 = {
 						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
 						TestTargetID = 4C2D6C232E36507C00F35F70;
 					};
 					4C2D6C462E36507F00F35F70 = {
@@ -459,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -467,6 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.furkankarakoc.ECommerceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ECommerce.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ECommerce";
@@ -477,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
